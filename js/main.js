@@ -2,6 +2,7 @@ const app = new Vue({
     el: '#app',
     data: {
         newFilter: '',
+        filteredList: [],
     },
     // created() {
     //     axios.get('https://developers.themoviedb.org/3')
@@ -14,7 +15,11 @@ const app = new Vue({
     // },
     methods: {
         filterGenre(newFilter) {
-            axios.get('https://developers.themoviedb.org/3')
+            axios.get('https://developers.themoviedb.org/3', {
+                params: {
+                    
+                }
+            })
             .then(result => {
             })
             .catch(error => {
