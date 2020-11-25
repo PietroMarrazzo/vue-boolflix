@@ -3,7 +3,7 @@ const app = new Vue({
     data: {
         newFilter: '',
         filteredList: [],
-        vote: 0,
+        // vote: 0,
     },
     // created() {
     //     axios.get('https://api.themoviedb.org/3/search/movie?api_key=e99307154c6dfb0b4750f6603256716d&query=ritorno+al+futuro')
@@ -24,13 +24,8 @@ const app = new Vue({
                 }
             })
             .then(result => {
-
                 this.filteredList = result.data.results;
-                
-                // if (this.filteredList.title.includes) {
-                //     cdFiltered = cdFiltered.filter( cd => cd.genre.toLowerCase() === this.actualGenre )
-                // }
-                console.log(result.data.results);
+                console.log(result.data.results);                
             })
             .catch(error => {
                 console.log(error);

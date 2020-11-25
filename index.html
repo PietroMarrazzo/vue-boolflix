@@ -34,10 +34,11 @@
                         <p v-else-if="items.original_language == 'en'">Lingua: <img src="./img/en.png" alt=""></p>
                         <p v-else>{{ items.original_language }}</p>     
                     </li>
-                    <li class="stars d-flex">
+                    <li class="stars">
                         {{ items.vote_average }}
                         <i v-for="n in getVote(items.vote_average)"
                            class="fas fa-star"></i>
+                        <i v-for="n in 5 - getVote(items.vote_average)" class="far fa-star"></i>
                     </li>
                 </ul>
            </li>
