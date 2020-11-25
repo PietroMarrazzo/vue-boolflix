@@ -21,16 +21,19 @@
        </div>
 
        <ul class="items-list">
-           <li class="item">
+           <li v-for="items in filteredList" class="item">
                 <ul class="item-info-list">
                     <li class="title">
-
+                        <p>Titolo</p>
+                        <p>{{ items.title }}</p>
                     </li>
                     <li class="title-original">
-
+                        <p>Titolo originale</p>
+                        <p>{{ items.original_title }}</p>
                     </li>
                     <li class="lenguage">
-
+                        <p>Lingua</p>
+                        <p>{{  }}</p>
                     </li>
                     <li class="stars">
 
