@@ -33,7 +33,7 @@ const app = new Vue({
         },
 
         getVote(vote) {
-            return Math.ceil(vote) / 2;
+            return Math.ceil(vote / 2);
         }
     }
 });
