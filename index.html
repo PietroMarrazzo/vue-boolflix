@@ -16,10 +16,28 @@
 <body>
     <div id="app">
        <div class="searcher">
-            <input v-model="newFilter" type="text" placeholder="digita parola chiave">
-            <button>cerca</button>
+            <input v-model="newFilter" v-on:keyup.enter="filterGenre()" type="text" placeholder="digita parola chiave">
+            <button @click="filterGenre()">cerca</button>
        </div>
 
+       <ul class="items-list">
+           <li class="item">
+                <ul class="item-info-list">
+                    <li class="title">
+
+                    </li>
+                    <li class="title-original">
+
+                    </li>
+                    <li class="lenguage">
+
+                    </li>
+                    <li class="stars">
+
+                    </li>
+                </ul>
+           </li>
+       </ul>
 
     </div>
     
