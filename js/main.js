@@ -26,10 +26,10 @@ const app = new Vue({
             .then(result => {
 
                 let filteredList = result.data.response;
-                
-                if (this.actualGenre !== 'all') {
-                    cdFiltered = cdFiltered.filter( cd => cd.genre.toLowerCase() === this.actualGenre )
-                }
+
+                // if (this.filteredList.title.includes) {
+                //     cdFiltered = cdFiltered.filter( cd => cd.genre.toLowerCase() === this.actualGenre )
+                // }
                 // console.log(result.data.result);
             })
             .catch(error => {
