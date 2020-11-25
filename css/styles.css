@@ -7,3 +7,9 @@
 body {
     font-family: 'Lato', sans-serif;
 }
+
+img {
+    height: 18px;
+    max-height: 18px;
+    max-width: 25px;
+}

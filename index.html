@@ -16,27 +16,28 @@
 <body>
     <div id="app">
        <div class="searcher">
-            <input v-model="newFilter" v-on:keyup.enter="filterGenre()" type="text" placeholder="digita parola chiave">
-            <button @click="filterGenre()">cerca</button>
+            <input v-model="newFilter" v-on:keyup.enter="filter()" type="text" placeholder="digita parola chiave">
+            <button @click="filter()">cerca</button>
        </div>
 
        <ul class="items-list">
            <li v-for="items in filteredList" class="item">
                 <ul class="item-info-list">
                     <li class="title">
-                        <p>Titolo</p>
-                        <p>{{ items.title }}</p>
+                        <p>Titolo: {{ items.title }}</p>
                     </li>
                     <li class="title-original">
-                        <p>Titolo originale</p>
-                        <p>{{ items.original_title }}</p>
+                        <p>Titolo originale: {{ items.original_title }}</p>
                     </li>
                     <li class="lenguage">
-                        <p>Lingua</p>
-                        <p>{{  }}</p>
+                        <p v-if="items.original_language == 'it'">Lingua: <img src="./img/it.png" alt="">
+                        <p v-else-if="items.original_language == 'en'">Lingua: <img src="./img/en.png" alt=""></p>
+                        <p v-else>{{ items.original_language }}</p>     
                     </li>
-                    <li class="stars">
-
+                    <li class="stars d-flex">
+                        {{ items.vote_average }}
+                        <i v-for="n in getVote(items.vote_average)"
+                           class="fas fa-star"></i>
                     </li>
                 </ul>
            </li>
