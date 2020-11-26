@@ -43,7 +43,7 @@ const app = new Vue({
 
 
             // serie TV
-            axios.get('https://api.themoviedb.org/3/search/movie', {
+            axios.get('https://api.themoviedb.org/3/search/tv', {
                 params: {
                     api_key: 'c97a4b0e3d4b6db1f6c5ebd74a382128',
                     query: this.newFilter,
