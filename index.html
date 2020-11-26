@@ -15,23 +15,32 @@
 
 <body>
     <div id="app">
-       <div class="searcher">
-            <input v-model="newFilter" v-on:keyup.enter="filter()" type="text" placeholder="digita parola chiave">
-            <button @click="filter()">cerca</button>
-       </div>
+        <header>
+            <div class="navbar">
+                <i>logo</i>
+            
+                <div class="search">
+                    <input v-model="newFilter" v-on:keyup.enter="filter()" type="text" placeholder="digita parola chiave">
+                    <button @click="filter()">cerca</button>
+                </div>
+            </div>
+        </header>
+       
 
        <ul class="items-list">
            <li v-for="items in filteredList" class="item">
+                <img :src="'https://image.tmdb.org/t/p/w500${items.poster_path}'" alt="">
+                <!-- <img v-else src="https://www.altavod.com/assets/images/poster-placeholder.png" alt=""> -->
                 <ul class="item-info-list">
                     <li class="title">
-                        <p>Titolo: {{ items.title }}</p>
+                        <p>Titolo: {{ items.title }} {{ items.name }}</p>
                     </li>
                     <li class="title-original">
-                        <p>Titolo originale: {{ items.original_title }}</p>
+                        <p>Titolo originale: {{ items.original_title }} {{ items.original_name }}</p>
                     </li>
-                    <li class="lenguage">
-                        <p v-if="items.original_language == 'it'">Lingua: <img src="./img/it.png" alt="">
-                        <p v-else-if="items.original_language == 'en'">Lingua: <img src="./img/en.png" alt=""></p>
+                    <li class="language">
+                        <p v-if="items.original_language == 'it'">Lingua: <img src="./img/it.png" alt=""></p> 
+                        <p v-else-if="items.original_language == 'en'">Lingua: <img src="./img/en.png" alt=""></p> 
                         <p v-else>{{ items.original_language }}</p>     
                     </li>
                     <li class="stars">

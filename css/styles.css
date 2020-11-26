@@ -8,7 +8,38 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-img {
+
+/* UTILITIES */
+.d-flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+
+/* TEXT STYLES */
+
+
+
+
+
+
+/*  */
+.language p img {
     height: 18px;
     max-height: 18px;
     max-width: 25px;
