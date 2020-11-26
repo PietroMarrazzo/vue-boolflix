@@ -14,30 +14,46 @@
 </head>
 
 <body>
+    <!-- APP -->
     <div id="app">
+        
+        <!-- HEADER -->
         <header>
             <div class="navbar d-flex">
-                <img src="./img/logo.png" alt="">
-            
+                <a href=""><img src="./img/logo.png" alt=""></a>
                 <div class="search">
-                    <input v-model="newFilter" v-on:keyup.enter="filter()" type="text" placeholder="digita parola chiave">
-                    <button @click="filter()">cerca</button>
+                    <input v-model="newFilter" v-on:keyup.enter="filter()" type="text" placeholder="Digita cosa stai cercando">
+                    <!-- <button @click="filter()">cerca</button> -->
                 </div>
             </div>
         </header>
        
+        <!-- MAIN -->
        <main>
             <ul class="items-list d-flex">
-                <li v-for="items in filteredList" class="item">
-                        <img v-if="items.poster_path != 'null'" :src="`https://image.tmdb.org/t/p/w500${items.poster_path}`" alt="">
-                        <img v-else src="https://www.altavod.com/assets/images/poster-placeholder.png" alt="">
+                <li v-for="items in filteredList" class="item p-relative">
+                        <img class="poster" v-if="items.poster_path !== null" :src="`https://image.tmdb.org/t/p/w500${items.poster_path}`" alt="">
+                        <img class="poster" v-else src="https://www.altavod.com/assets/images/poster-placeholder.png" alt="">
+                        
+                        <!-- overview on hover -->
+                        <div class="overview-container hidden p-absolute">
+                            prova
+                        </div>
+
+                        <!-- contenuto in overview -->
                         <ul class="item-info-list">
                             <li class="title">
-                                <p>{{ items.title }} {{ items.name }}</p>
+                                <p>Titolo: {{ items.title }} {{ items.name }}</p>
                             </li>
-                            <li class="title-original">
-                                <p>{{ items.original_title }} {{ items.original_name }}</p>
+                            <!-- mostra titolo originale solo se diverso da titolo -->
+                            <li v-show="items.title !== items.original_title && items.name !== items.original_name" class="title-original">
+                                <p>Titolo originale: {{ items.original_title }} {{ items.original_name }}</p>
                             </li>
+
+                            <li class="overview">
+                                <p> {{ items.overview }} </p>
+                            </li>
+
                             <li class="language">
                                 <img v-if="items.original_language == 'it'" src="./img/it.png" alt="">
                                 <img v-else-if="items.original_language == 'en'" src="./img/en.png" alt=""> 
