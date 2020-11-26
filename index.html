@@ -29,8 +29,8 @@
 
        <ul class="items-list">
            <li v-for="items in filteredList" class="item">
-                <img :src="'https://image.tmdb.org/t/p/w500${items.poster_path}'" alt="">
-                <!-- <img v-else src="https://www.altavod.com/assets/images/poster-placeholder.png" alt=""> -->
+                <img v-if="items.poster_path != 'null'" :src="'https://image.tmdb.org/t/p/w500${items.poster_path}'" alt="">
+                <img v-else src="https://www.altavod.com/assets/images/poster-placeholder.png" alt="">
                 <ul class="item-info-list">
                     <li class="title">
                         <p>Titolo: {{ items.title }} {{ items.name }}</p>
