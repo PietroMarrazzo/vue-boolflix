@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    background-color: #141414;
 }
 
 
@@ -30,17 +31,31 @@ body {
     position: absolute;
 }
 
+.overflow-x {
+    overflow-x: auto;
+}
 
 /* TEXT STYLES */
+main ul {
+    list-style: none;
+}
 
 
+/* HEADER */
+.navbar {
+    background-color: black;
+    justify-content: space-between;
+    align-items: flex-end;
+}
 
-
+.navbar img {
+    height: 100px;
+}
 
 
 /*  */
-.language p img {
-    height: 18px;
-    max-height: 18px;
-    max-width: 25px;
+.language img {
+    height: 25px;
+    max-height: 25px;
+    max-width: 40px;
 }
