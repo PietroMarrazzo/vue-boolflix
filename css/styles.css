@@ -76,6 +76,8 @@ main ul {
 .navbar i {
     color: white;
     font-size: 20px;
+    bottom: 0;
+    right: 70px;
 }
 
 .navbar i:hover {
@@ -106,8 +108,11 @@ main ul {
     opacity: 0;
 }
 
-
-
+.search {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
 
 /* .toggle-active {
     opacity: 1;
