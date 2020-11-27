@@ -6,10 +6,11 @@ const app = new Vue({
         // searchbar
         activeSearch: false,
         // vote: 0,
-        toggleActive: {
-                opacity: '1',
-                width: '300px',
-        },
+        // toggleActive: {
+        //         opacity: '1',
+        //         width: '300px',
+        //         transition: 'width 3s, opacity 2s',
+        // },
         // toggle: {
         //     transition: 'width .5s, opacity .2s',
         // }

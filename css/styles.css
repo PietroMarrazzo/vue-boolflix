@@ -65,7 +65,7 @@ main ul {
 }
 
 .navbar input {
-    width: 300px;
+    /* width: 50px; */
     margin-right: 40px;
     border: 1px solid rgba(255, 255, 255);
     padding: 5px 5px 5px 10px;
@@ -83,19 +83,31 @@ main ul {
 }
 
 /* transform search bar */
-.search-off {
+/* .search-off {
     opacity: 0;
     width: 50px;
-    transition: width 2s, opacity .2s;
+    transition: width 3s, opacity 2s; 
 }
 
-/* .toggle {
-    -webkit-transition: width .5s, opacity .2s; 
-    -moz-transition: width .5s, opacity .2s; 
-    -o-transition: width .5s, opacity .2s;
-    -ms-transition: width .5s, opacity .2s;
-    transition: width .5s, opacity .2s;
+.toggle {
+    transition: width 3s, opacity 2s; 
 } */
+
+/* prova VUE */
+.width-enter-active, 
+.width-leave-active {
+    width: 300px;
+    transition: opacity 1s, width .5s;
+}
+
+.width-enter,
+.width-leave-to {
+    width: 50px;
+    opacity: 0;
+}
+
+
+
 
 /* .toggle-active {
     opacity: 1;
