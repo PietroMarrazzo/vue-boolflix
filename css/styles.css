@@ -83,16 +83,24 @@ main ul {
 }
 
 /* transform search bar */
-.transform-search {
+.search-off {
     opacity: 0;
     width: 50px;
-    transition: width .5s, opacity .2s;
+    transition: width 2s, opacity .2s;
 }
 
-.transform-search-active {
+/* .toggle {
+    -webkit-transition: width .5s, opacity .2s; 
+    -moz-transition: width .5s, opacity .2s; 
+    -o-transition: width .5s, opacity .2s;
+    -ms-transition: width .5s, opacity .2s;
+    transition: width .5s, opacity .2s;
+} */
+
+/* .toggle-active {
     opacity: 1;
     width: 300px;
-}
+} */
 
 
 /* MAIN */

@@ -4,8 +4,15 @@ const app = new Vue({
         newFilter: '',
         filteredList: [],
         // searchbar
-        transformSearch: false,
+        activeSearch: false,
         // vote: 0,
+        toggleActive: {
+                opacity: '1',
+                width: '300px',
+        },
+        // toggle: {
+        //     transition: 'width .5s, opacity .2s',
+        // }
     },
     // created() {
     //     axios.get('https://api.themoviedb.org/3/search/movie?api_key=e99307154c6dfb0b4750f6603256716d&query=ritorno+al+futuro')
@@ -71,10 +78,10 @@ const app = new Vue({
         },
 
         toggleSearch() {
-            if (this.transformSearch) {
-                this.transformSearch = false;
+            if (this.activeSearch) {
+                this.activeSearch = false;
             } else {
-                this.transformSearch = true;
+                this.activeSearch = true;
             };
         }
     }
