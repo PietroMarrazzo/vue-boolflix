@@ -3,6 +3,8 @@ const app = new Vue({
     data: {
         newFilter: '',
         filteredList: [],
+        // searchbar
+        transformSearch: false,
         // vote: 0,
     },
     // created() {
@@ -66,6 +68,14 @@ const app = new Vue({
 
         getVote(vote) {
             return Math.ceil(vote / 2);
+        },
+
+        toggleSearch() {
+            if (this.transformSearch) {
+                this.transformSearch = false;
+            } else {
+                this.transformSearch = true;
+            };
         }
     }
 });

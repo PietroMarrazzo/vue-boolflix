@@ -21,9 +21,15 @@
         <header>
             <div class="navbar d-flex">
                 <a href=""><img src="./img/logo.png" alt=""></a>
-                <div class="search">
-                    <input v-model="newFilter" v-on:keyup.enter="filter()" type="text" placeholder="Digita cosa stai cercando">
+                <div class="search p-relative">
+                    <input v-model="newFilter" v-on:keyup.enter="filter()"
+                           v-bind:class="[transformSearch ? transform-search-active : '', errorClass]"
+                           type="text" placeholder="Digita cosa stai cercando">
                     <!-- <button @click="filter()">cerca</button> -->
+                    <!-- <input class="search-off" type="text"> -->
+                        <i @click="toggleSearch()"
+                           class="fas fa-search">
+                        </i> 
                 </div>
             </div>
         </header>

@@ -67,10 +67,32 @@ main ul {
 .navbar input {
     width: 300px;
     margin-right: 40px;
-    border: none;
+    border: 1px solid rgba(255, 255, 255);
     padding: 5px 5px 5px 10px;
+    background-color: #141414;
+    color: rgba(255, 255, 255, 0.555);
 }
 
+.navbar i {
+    color: white;
+    font-size: 20px;
+}
+
+.navbar i:hover {
+    cursor: pointer;
+}
+
+/* transform search bar */
+.transform-search {
+    opacity: 0;
+    width: 50px;
+    transition: width .5s, opacity .2s;
+}
+
+.transform-search-active {
+    opacity: 1;
+    width: 300px;
+}
 
 
 /* MAIN */
