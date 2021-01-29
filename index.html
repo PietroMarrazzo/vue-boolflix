@@ -30,15 +30,14 @@
                     <!-- <button @click="filter()">cerca</button> -->
                     <!-- <input class="search-off" type="text"> -->
                     <i v-on:click="activeSearch = !activeSearch"
-                        class="fas fa-search p-relative">
+                        class="fas fa-search p-absolute">
                     </i> 
                 </div>
             </div>
         </header>
-       
         <!-- MAIN -->
        <main>
-            <ul class="items-list d-flex">
+            <ul class="items-list d-flex wrap">
                 <li v-for="items in filteredList" class="item p-relative">
                         <img class="poster" v-if="items.poster_path !== null"
                              :src="`https://image.tmdb.org/t/p/w500${items.poster_path}`" alt="">
